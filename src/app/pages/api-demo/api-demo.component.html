@@ -1,0 +1,30 @@
+<section class="api-header">
+  <div>
+    <p class="eyebrow">Stoc actualizat</p>
+    <h1>Masini disponibile</h1>
+    <p>
+      Lista este incarcata printr-un request HTTP local, astfel incat pagina poate
+      afisa stari clare pentru incarcare, reusita si eroare.
+    </p>
+  </div>
+  <button type="button" (click)="loadCars()" [disabled]="loading">
+    {{ loading ? 'Se incarca...' : 'Actualizeaza stocul' }}
+  </button>
+</section>
+
+<p class="state-message" *ngIf="loading">Se incarca masinile disponibile...</p>
+<p class="state-message error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+<section class="cars-grid" *ngIf="!loading && !errorMessage">
+  <article *ngFor="let car of cars" class="car-card">
+    <img [src]="car.imageUrl" [alt]="car.make + ' ' + car.model" />
+    <div class="car-body">
+      <span>{{ car.status }}</span>
+      <h2>{{ car.make }} {{ car.model }}</h2>
+      <p>{{ car.year }} · {{ car.mileage }} km · {{ car.fuel }} · {{ car.transmission }}</p>
+      <p>{{ car.city }}</p>
+      <strong>{{ car.price | currency:'EUR':'symbol':'1.0-0' }}</strong>
+      <small>{{ car.highlight }}</small>
+    </div>
+  </article>
+</section>

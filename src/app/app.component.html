@@ -1,0 +1,26 @@
+<header class="app-shell">
+  <a class="brand" routerLink="/">
+    <span class="brand-mark">AD</span>
+    <span>{{ title }}</span>
+  </a>
+
+  <nav class="main-nav" aria-label="Navigatie principala">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Acasa</a>
+    <a routerLink="/stoc" routerLinkActive="active">Masini</a>
+    <a routerLink="/vinde" routerLinkActive="active">Vinde</a>
+    <a routerLink="/dealer" routerLinkActive="active">Dealer</a>
+  </nav>
+
+  <div class="session" *ngIf="user$ | async as user; else guestActions">
+    <span>{{ user.username }}</span>
+    <button type="button" (click)="logout()">Iesire</button>
+  </div>
+
+  <ng-template #guestActions>
+    <a class="login-link" routerLink="/login">Cont dealer</a>
+  </ng-template>
+</header>
+
+<main class="page-shell">
+  <router-outlet />
+</main>

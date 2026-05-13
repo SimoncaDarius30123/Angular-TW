@@ -1,0 +1,82 @@
+.protected-panel {
+  padding: 1.5rem;
+  border: 1px solid #dde5ed;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  color: #0b7285;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1,
+p {
+  margin-top: 0;
+}
+
+p {
+  max-width: 42rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+dl div {
+  padding: 1rem;
+  border-radius: 0.45rem;
+  background: #f1f5f9;
+}
+
+dt {
+  color: #64748b;
+  font-weight: 800;
+}
+
+dd {
+  overflow-wrap: anywhere;
+  margin: 0.35rem 0 0;
+  color: #172026;
+  font-weight: 900;
+}
+
+.task-panel {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 0.45rem;
+  background: #fff7ed;
+}
+
+.task-panel h2 {
+  margin-top: 0;
+}
+
+.task-panel ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #64748b;
+}
+
+a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  border: 1px solid #0b7285;
+  border-radius: 0.45rem;
+  color: #ffffff;
+  background: #0b7285;
+  font-weight: 900;
+  text-decoration: none;
+}

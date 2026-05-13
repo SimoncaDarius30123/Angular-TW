@@ -1,0 +1,76 @@
+<section class="form-layout">
+  <div class="intro-panel">
+    <p class="eyebrow">Vinde prin AutoDrive</p>
+    <h1>Cere o estimare pentru masina ta</h1>
+    <p>
+      Completeaza datele principale, iar un consultant iti poate propune un pret
+      de listare si urmatorii pasi pentru publicarea anuntului.
+    </p>
+  </div>
+
+  <form class="feedback-form" [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+    <label>
+      Nume
+      <input type="text" formControlName="ownerName" placeholder="Ex: Alex Popescu" />
+      <small *ngIf="isInvalid('ownerName')">Numele trebuie sa aiba cel putin 2 caractere.</small>
+    </label>
+
+    <label>
+      Email
+      <input type="email" formControlName="email" placeholder="alex@example.com" />
+      <small *ngIf="isInvalid('email')">Introdu o adresa de email valida.</small>
+    </label>
+
+    <label>
+      Telefon
+      <input type="tel" formControlName="phone" placeholder="07xx xxx xxx" />
+      <small *ngIf="isInvalid('phone')">Introdu un numar de telefon valid.</small>
+    </label>
+
+    <label>
+      Marca
+      <input type="text" formControlName="brand" placeholder="Ex: Toyota" />
+      <small *ngIf="isInvalid('brand')">Marca este obligatorie.</small>
+    </label>
+
+    <label>
+      Model
+      <input type="text" formControlName="model" placeholder="Ex: Corolla" />
+      <small *ngIf="isInvalid('model')">Modelul este obligatoriu.</small>
+    </label>
+
+    <label>
+      An fabricatie
+      <input type="number" min="1995" max="2026" formControlName="year" />
+      <small *ngIf="isInvalid('year')">Anul trebuie sa fie intre 1995 si 2026.</small>
+    </label>
+
+    <label>
+      Pret dorit
+      <input type="number" min="1000" formControlName="askingPrice" />
+      <small *ngIf="isInvalid('askingPrice')">Pretul trebuie sa fie peste 1000 EUR.</small>
+    </label>
+
+    <label class="full-row">
+      Detalii masina
+      <textarea rows="5" formControlName="message" placeholder="Dotari, stare tehnica, istoric service"></textarea>
+      <small *ngIf="isInvalid('message')">Mesajul trebuie sa aiba cel putin 10 caractere.</small>
+    </label>
+
+    <label class="checkbox-row">
+      <input type="checkbox" formControlName="acceptContact" />
+      Accept sa fiu contactat pentru evaluare
+    </label>
+
+    <button type="submit" [disabled]="feedbackForm.invalid">Trimite cererea</button>
+  </form>
+</section>
+
+<aside class="result-panel" *ngIf="submittedFeedback">
+  <h2>Cerere primita</h2>
+  <p><strong>Proprietar:</strong> {{ submittedFeedback.ownerName }}</p>
+  <p><strong>Email:</strong> {{ submittedFeedback.email }}</p>
+  <p><strong>Masina:</strong> {{ submittedFeedback.brand }} {{ submittedFeedback.model }}, {{ submittedFeedback.year }}</p>
+  <p><strong>Pret dorit:</strong> {{ submittedFeedback.askingPrice }} EUR</p>
+  <p><strong>Detalii:</strong> {{ submittedFeedback.message }}</p>
+</aside>

@@ -1,0 +1,84 @@
+<section class="hero">
+  <div>
+    <p class="eyebrow">Masini rulate verificate</p>
+    <h1>{{ appName }}</h1>
+    <p class="hero-copy">
+      Gaseste rapid o masina potrivita sau trimite masina ta pentru evaluare.
+      Listarile sunt clare, filtrate si pregatite pentru programare la test drive.
+    </p>
+    <div class="hero-actions">
+      <a routerLink="/stoc">Vezi stocul</a>
+      <a routerLink="/vinde" class="secondary-action">Vinde masina</a>
+    </div>
+  </div>
+
+  <aside class="stats-panel" aria-label="Rezumat proiect">
+    <div *ngFor="let stat of stats">
+      <strong>{{ stat.value }}</strong>
+      <span>{{ stat.label }}</span>
+    </div>
+  </aside>
+</section>
+
+<section class="progress-section">
+  <div>
+    <h2>Masini salvate</h2>
+    <p>{{ savedPercent }}% din recomandarile de pe prima pagina sunt salvate.</p>
+  </div>
+  <div class="progress-track" aria-label="Procent masini salvate">
+    <span [style.width.%]="savedPercent"></span>
+  </div>
+</section>
+
+<section class="featured-section" aria-label="Recomandari AutoDrive">
+  <article
+    *ngFor="let car of featuredCars"
+    class="featured-card"
+    [ngClass]="{ saved: isSaved(car.id) }"
+    [appHighlight]="isSaved(car.id)"
+  >
+    <img [src]="car.imageUrl" [alt]="car.make + ' ' + car.model" />
+    <div class="featured-body">
+      <span>{{ car.status }}</span>
+      <h2>{{ car.make }} {{ car.model }}</h2>
+      <p>{{ car.year }} · {{ car.mileage }} km · {{ car.fuel }} · {{ car.transmission }}</p>
+      <strong>{{ car.price }} EUR</strong>
+      <button type="button" (click)="toggleSaved(car)">
+        {{ isSaved(car.id) ? 'Scoate din favorite' : 'Salveaza masina' }}
+      </button>
+    </div>
+  </article>
+</section>
+
+<section class="topics-layout">
+  <div class="topic-list" aria-label="Categorii masini">
+    <article
+      *ngFor="let category of categories"
+      class="topic-card"
+      [ngClass]="{ selected: category.id === selectedCategory.id }"
+      [appHighlight]="category.id === selectedCategory.id"
+      (click)="selectCategory(category)"
+      tabindex="0"
+    >
+      <span class="requirement">{{ category.count }}</span>
+      <div>
+        <h3>{{ category.title }}</h3>
+        <p>{{ category.description }}</p>
+      </div>
+    </article>
+  </div>
+
+  <article class="details-panel" *ngIf="selectedCategory">
+    <span class="requirement large">{{ selectedCategory.count }}</span>
+    <h2>{{ selectedCategory.title }}</h2>
+    <p>{{ selectedCategory.description }}</p>
+
+    <div class="tags">
+      <span *ngFor="let tag of selectedCategory.tags">{{ tag }}</span>
+    </div>
+
+    <div class="details-actions">
+      <a [routerLink]="selectedCategory.route">Deschide categoria</a>
+    </div>
+  </article>
+</section>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Volkswagen Passat Variant">
+  <rect width="800" height="450" fill="#dfeaed"/>
+  <rect x="0" y="310" width="800" height="140" fill="#b9c9ce"/>
+  <path d="M126 282h548l-28-78c-10-27-36-45-65-45H282c-35 0-68 17-88 46l-68 77Z" fill="#12343b"/>
+  <path d="M284 182h112l-20 76H216l49-56c5-7 12-14 19-20Zm140 0h137c17 0 32 11 38 27l18 49H404l20-76Z" fill="#9bd3df"/>
+  <rect x="160" y="260" width="500" height="58" rx="18" fill="#0b7285"/>
+  <circle cx="248" cy="320" r="43" fill="#1f2937"/>
+  <circle cx="248" cy="320" r="21" fill="#dbe7ea"/>
+  <circle cx="574" cy="320" r="43" fill="#1f2937"/>
+  <circle cx="574" cy="320" r="21" fill="#dbe7ea"/>
+  <rect x="622" y="272" width="42" height="14" rx="7" fill="#ffd166"/>
+</svg>

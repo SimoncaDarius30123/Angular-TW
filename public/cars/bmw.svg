@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="BMW 320d xDrive">
+  <rect width="800" height="450" fill="#eef2f7"/>
+  <rect x="0" y="314" width="800" height="136" fill="#cbd5e1"/>
+  <path d="M138 287h524l-46-76c-16-27-45-44-77-44H323c-37 0-72 16-95 45l-90 75Z" fill="#111827"/>
+  <path d="M319 190h95l-24 72H248l53-55c5-6 11-12 18-17Zm124 0h91c24 0 46 13 58 33l23 39H419l24-72Z" fill="#bfdbfe"/>
+  <rect x="165" y="258" width="470" height="64" rx="22" fill="#334155"/>
+  <path d="M365 278h68" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="259" cy="322" r="43" fill="#0f172a"/>
+  <circle cx="259" cy="322" r="20" fill="#e2e8f0"/>
+  <circle cx="562" cy="322" r="43" fill="#0f172a"/>
+  <circle cx="562" cy="322" r="20" fill="#e2e8f0"/>
+  <rect x="602" y="274" width="36" height="13" rx="6" fill="#ffd166"/>
+</svg>

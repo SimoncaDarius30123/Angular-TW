@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Hyundai Tucson Hybrid">
+  <rect width="800" height="450" fill="#e8f3f6"/>
+  <rect x="0" y="309" width="800" height="141" fill="#b8cbd3"/>
+  <path d="M132 286h536l-38-89c-10-24-34-40-60-40H305c-36 0-69 17-90 45l-83 84Z" fill="#0f3d4a"/>
+  <path d="M306 184h109l-18 76H236l52-58c5-7 12-13 18-18Zm138 0h118c18 0 34 11 41 28l20 48H426l18-76Z" fill="#bae6fd"/>
+  <rect x="160" y="256" width="492" height="68" rx="26" fill="#0e7490"/>
+  <path d="M518 264l62 38" stroke="#8bd3dd" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="253" cy="322" r="46" fill="#1f2937"/>
+  <circle cx="253" cy="322" r="21" fill="#e8f3f6"/>
+  <circle cx="572" cy="322" r="46" fill="#1f2937"/>
+  <circle cx="572" cy="322" r="21" fill="#e8f3f6"/>
+</svg>

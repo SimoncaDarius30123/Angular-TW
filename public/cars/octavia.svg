@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Skoda Octavia Style">
+  <rect width="800" height="450" fill="#eef2f2"/>
+  <rect x="0" y="312" width="800" height="138" fill="#c7d2d5"/>
+  <path d="M135 286h530l-34-77c-12-28-39-46-69-46H303c-35 0-68 16-90 44l-78 79Z" fill="#18392b"/>
+  <path d="M305 186h111l-19 75H232l52-56c6-7 13-14 21-19Zm139 0h111c19 0 36 11 44 29l19 46H425l19-75Z" fill="#bbf7d0"/>
+  <rect x="158" y="259" width="490" height="61" rx="16" fill="#15803d"/>
+  <circle cx="251" cy="321" r="42" fill="#1f2937"/>
+  <circle cx="251" cy="321" r="20" fill="#eef2f2"/>
+  <circle cx="566" cy="321" r="42" fill="#1f2937"/>
+  <circle cx="566" cy="321" r="20" fill="#eef2f2"/>
+  <rect x="607" y="272" width="42" height="13" rx="6" fill="#ffd166"/>
+</svg>
